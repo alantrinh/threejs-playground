@@ -1,0 +1,24 @@
+{
+  "name": "threejs-playground",
+  "version": "1.0.0",
+  "description": "Trying out Three.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alantrinh/threejs-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alantrinh/threejs-playground/issues"
+  },
+  "homepage": "https://github.com/alantrinh/threejs-playground#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
