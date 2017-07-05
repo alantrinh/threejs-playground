@@ -34,7 +34,11 @@
     var element, container;
 
     var clock = new THREE.Clock();
+    var marginbottom = 0, chartwidth = 90, chartheight = 30; //3D units
 
+    var xscale = d3.scale.linear().range([0, chartwidth]),
+
+    yscale = d3.scale.linear().range([0, chartheight]);
     init();
     animate();
 
@@ -118,8 +122,12 @@
       /////// START CONTENT HERE ////////
 
      d3.csv('data.csv', population, (data) => {
-         function population(d) {
 
+         xscale.domain([0, data.length - 1]);
+
+         yscale.domain([0, d3.max(data, function(d){ return d.all; })]);
+
+         function population(d) {
           d.all = +d.all;
 
           d.male = +d.male;
